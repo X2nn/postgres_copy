@@ -10,7 +10,7 @@ CVE-2019-9193 postgres数据库的copy函数导致的命令执行漏洞
 本脚本用于实现Postgres数据库的远程连接，同时利用漏洞，使用COPY函数执行系统命令，并获取回显的结果。
 
 ## 可能出现问题:
-代码在执行的过程中可能会由于编码的问题报错，导致执行的结果无法回显的问题。
+代码在执行的过程中可能会由于编码的问题报错，导致执行的结果无法回显的问题。  
 例如，在windows当中，可以使用certutil进行base64编码后输出，如下：
 dir > 1.txt && certutil -encode 1.txt 2.txt
 certutil -encode postgresql.conf 2.txt
